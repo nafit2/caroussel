@@ -1,0 +1,35 @@
+.slide{
+    border: solid 10px;
+    width:  50VW;
+    height: 50vh;
+    margin: 0 auto ;/**marge vertical marge horizontal*/
+    position: relative;
+    overflow: hidden;
+}
+
+:hover.slide img{
+    width: inherit; /**INHERIT dia midika oe mitovy am'le angezan'le cadre eny ambony ny angezany*/
+    height: inherit;
+    position: absolute;
+    right: -100%;
+    animation-name:carousel;
+    animation-duration:6s;
+    
+}
+
+
+.slide img:first-child{
+    animation-delay:3s;
+}
+.slide img:nth-child(2){
+    animation-delay:6s
+}
+.slide img:last-child{
+    animation-delay:9s;
+}
+
+@keyframes carousel{
+    0%{right:-100%}
+    50%{right:0%}
+    100%{right:100%}
+}
